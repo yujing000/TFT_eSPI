@@ -1,0 +1,40 @@
+// ------------------------
+// 驅動設定
+// ------------------------
+#define ILI9341_DRIVER    // 使用 ILI9341 螢幕驅動
+
+// ------------------------
+// 螢幕接腳定義
+// ------------------------
+#define TFT_CS   15       // 螢幕 CS 腳位 (可依你的實際接線調整)
+#define TFT_DC    2       // Data/Command 腳
+#define TFT_RST   4       // Reset 腳（也可以 #define TFT_RST -1 使用軟體重置）
+
+#define TFT_MOSI 23       // SPI MOSI
+#define TFT_SCLK 18       // SPI Clock
+#define TFT_MISO 19       // SPI MISO（讀取觸控用，可不接）
+
+// ------------------------
+// 字型與圖形功能
+// ------------------------
+#define LOAD_GLCD
+#define LOAD_FONT2
+#define LOAD_FONT4
+#define LOAD_FONT6
+#define LOAD_FONT7
+#define LOAD_FONT8
+#define LOAD_GFXFF
+#define SMOOTH_FONT
+
+// ------------------------
+// SPI 頻率設定
+// ------------------------
+#define SPI_FREQUENCY       27000000     // SPI 資料傳輸頻率
+#define SPI_READ_FREQUENCY  20000000     // SPI 讀取頻率（給觸控或資料回讀）
+#define SPI_TOUCH_FREQUENCY 2500000      // 觸控模組頻率（若有）
+
+// ------------------------
+// 額外選項（如使用電阻觸控）
+// ------------------------
+// 若使用觸控模組，如 XPT2046，則需額外設定 SPI 接腳
+// #define TOUCH_CS 21
